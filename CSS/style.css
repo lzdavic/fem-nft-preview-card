@@ -25,7 +25,6 @@ html {
     font-family: 'Outfit', sans-serif;
     font-size: 1.125rem;
     color: var(--White);
-    transition: 400ms;
 }
 
 body {
@@ -45,70 +44,79 @@ body {
     gap: 1em;
 }
 
-    .card__image {
-        border-radius: 0.5em;
-    }
+.img--container {
+    height: 16.75rem;
 
-    .card__title {
-        font-size: 1.2em;
-        font-weight: 600;
-    }
+}
 
-    .card__description {
-        color: var(--Soft-blue);
-        font-weight: 300;
-        line-height: 1.5em;
-    }
+.card__image {
+    border-radius: 0.5em;
+    width: 16.5rem;
+}
 
-    .price-time--container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 0.9em;
-    }
+.card__title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
 
-        .card__price {
-            color: var(--Cyan);
-            font-weight: 600;
-        }
-            .card__price::before {
-                content: url('../images/icon-ethereum.svg');
-                vertical-align: middle;
-                margin-right: 2px;
-            }
+.card__description {
+    color: var(--Soft-blue);
+    font-weight: 300;
+    line-height: 1.5em;
+}
 
-        .card__time {
-            color: var(--Soft-blue);
-        }
-            .card__time::before {
-                content: url('../images/icon-clock.svg');
-                vertical-align: middle;
-                margin-right: 2px;
-            }
+.price-time--container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.card__price {
+    color: var(--Cyan);
+    font-weight: 600;
+}
+
+.card__price::before {
+    content: url('../images/icon-ethereum.svg');
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
+.card__time {
+    color: var(--Soft-blue);
+}
+
+.card__time::before {
+    content: url('../images/icon-clock.svg');
+    vertical-align: middle;
+    margin-right: 2px;
+}
 
 
-    .card__creator {
-        display: flex;
-        justify-items: flex-start;
-        align-items: center;
-        gap: 1em;
-        border-top: 1px solid var(--Very-dark-blue--Line);
-        padding-top: 1em;
-    }
-        .creator__avatar {
-            width: 1.778em;
-            border: 1px solid var(--White);
-            border-radius: 50%;
-        }
-        
-        .creator__name {
-            font-weight: 300;
-            font-size: 0.9em;
-        }
+.card__creator {
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+    gap: 1em;
+    border-top: 1px solid var(--Very-dark-blue--Line);
+    padding-top: 1em;
+}
 
-        .creator__name > span {
-            color: var(--Soft-blue);
-        }
+.creator__avatar {
+    width: 1.778em;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+
+.creator__name {
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+.creator__name>span {
+    color: var(--Soft-blue);
+}
 
 /* hover styles */
 
@@ -118,3 +126,16 @@ body {
     cursor: pointer;
 }
 
+.img--container:hover::after {
+    content: url("../images/icon-view.svg");
+    width: 16.75rem;
+    height: 16.75rem;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Cyan);
+    opacity: 70%;
+    transform: translate(0, -100%);
+    cursor: pointer;
+}
